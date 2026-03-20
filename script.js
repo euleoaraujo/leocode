@@ -67,26 +67,7 @@
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 })();
 
-// Popula as faixas com texto e ícones separadores
-(function () {
-  const text = "leo/code";
-  const repeat = 25;
 
-  function buildTickerHTML() {
-    let html = "";
-    for (let i = 0; i < repeat; i++) {
-      html += `<span class="ticker-text">${text}</span>`;
-      html += `<span class="ticker-icon">&lt;/&gt;</span>`;
-    }
-    return html;
-  }
-
-  const content = buildTickerHTML();
-  ["ticker-1a", "ticker-1b", "ticker-2a", "ticker-2b"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = content;
-  });
-})();
 
 // Mobile Menu Toggle
 (function () {
